@@ -1,0 +1,5 @@
+package br.com.seguranca.controller;
+
+public class AdminController {
+
+}

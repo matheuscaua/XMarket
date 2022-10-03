@@ -1,0 +1,50 @@
+package br.com.seguranca.controller;
+
+import java.util.List;
+
+import br.com.seguranca.dto.ProdutoDTO;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import br.com.seguranca.model.Produto;
+import br.com.seguranca.services.ProdutoServico;
+
+@RestController
+@RequestMapping("/produtos")
+@CrossOrigin("http://localhost:8080/admin/")
+public class ProdutoControlador {
+
+
+	@Autowired
+	private ProdutoServico produtoService;
+
+	
+	@GetMapping("/estoque")
+	public ResponseEntity<List<ProdutoDTO>> buscarTodos(){
+		List<ProdutoDTO> produtos = produtoService.listarProdutos();
+		return ResponseEntity.status(200).body(produtos);
+	}
+	
+	@PostMapping("/admin/inserir")
+	public ResponseEntity<ProdutoDTO> inserirProduto (@RequestBody ProdutoDTO produtoDTO) {
+		produtoService.inserirProduto(produtoDTO);
+		return ResponseEntity.status(HttpStatus.OK).body(produtoDTO);
+	}
+	
+	@GetMapping("/admin/estoque")
+	public ResponseEntity<List<Produto>> estoque(){
+		List<Produto> estoque = produtoService.estoque();
+		return ResponseEntity.status(200).body(estoque);
+	}
+
+
+
+
+
+
+
+
+
+}

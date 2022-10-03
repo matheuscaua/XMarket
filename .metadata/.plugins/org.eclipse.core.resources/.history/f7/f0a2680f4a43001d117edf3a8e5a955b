@@ -1,0 +1,5 @@
+package br.com.seguranca;
+
+public class BasicConfiguration extends WebSecurity{
+
+}

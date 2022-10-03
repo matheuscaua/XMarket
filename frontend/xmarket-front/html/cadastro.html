@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar</title>
+
+    <link rel="stylesheet" href="../css/cadastro.css">
+</head>
+
+<body id="background">
+
+        <div id="form-cadastro">
+            <form class="form-signin">
+                <div class="text-center mb-5">
+                    <h1 class="primary-color title">Cadastro</h1>
+
+                </div>
+
+                <div class="form-label-group">
+                    <input type="Nome" id="inputNome" class="form-control" placeholder="Nome" required autofocus>
+                    <label for="inputNome">Nome</label>
+                </div>
+
+                <div class="form-label-group mb-5">
+                    <input type="Email" id="inputEmail" class="form-control" placeholder="Email" required>
+                    <label for="inputEmail">Email</label>
+                </div>
+                <div class="form-label-group mb-5">
+                    <input type="text" id="inputCpf" class="form-control" placeholder="Cpf" required>
+                    <label for="inputCpf">CPF</label> 
+                </div>
+                <div class="form-label-group mb-5">
+                    <input type="text" id="inputRg" class="form-control" placeholder="Rg" required>
+                    <label for="inputRg">Rg</label>
+                </div>
+                <div class="form-label-group">
+                    <input type="Password" id="inputPassword" class="form-control" placeholder="Senha" required
+                        autofocus>
+                    <label for="inputPassword">Senha</label>
+                </div>
+
+                <div class="form-label-group mb-5">
+                    <input type="Password" id="inputConfirmPassword" class="form-control"
+                        placeholder="Confirmação de senha" required>
+                    <label for="inputConfirmPassword">Confirmação de senha</label>
+                </div>
+
+                <div class="form-label-group mb-5">
+                    <input type="text" id="inputTelefone" class="form-control" placeholder="Telefone" required>
+                    <label for="inputTelefone">Telefone</label>
+                </div>
+                <div class="form-label-group mb-5">
+                    <input type="text" id="inputEndereco" class="form-control" placeholder="Endereco" required>
+                    <label for="inputEndereco">Endereço</label>
+                </div>
+                <div style="display: flex; justify-content: space-between; bottom: 0;">
+                    <button class="btn btn-lg btn-primary btn-block btn-end-form" id="return"
+                        type="button"><strong>Retornar</strong></button>
+                    <button class="btn btn-lg btn-primary btn-block btn-end-form" id="submit"
+                        type="button"><strong>Prosseguir</strong></button>
+                </div>
+            </form>
+        </div>
+    <script type="module" src="../js/cadastro.js"></script>
+
+</body>
+
+</html>

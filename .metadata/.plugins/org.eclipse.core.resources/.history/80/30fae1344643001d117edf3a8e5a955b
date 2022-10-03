@@ -1,0 +1,9 @@
+package br.com.seguranca.model;
+
+import java.util.List;
+
+public class Estoque {
+	
+	List<Produto>
+	
+}

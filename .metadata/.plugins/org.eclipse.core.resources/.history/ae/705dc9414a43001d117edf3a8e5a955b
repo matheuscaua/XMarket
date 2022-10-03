@@ -1,0 +1,16 @@
+package br.com.seguranca;
+
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.neo4j.Neo4jProperties.Authentication;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration;
+
+public class BasicConfiguration extends WebSecurityConfiguration{
+
+		@Autowired DataSource dataSource;
+		
+		public void configure(AuthenticationManagerBuilder)
+	
+}

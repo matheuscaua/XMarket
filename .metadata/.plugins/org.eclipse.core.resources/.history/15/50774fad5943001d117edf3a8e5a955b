@@ -1,0 +1,42 @@
+package br.com.seguranca.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import br.com.seguranca.dto.ProdutoDTO;
+import br.com.seguranca.model.Produto;
+import br.com.seguranca.services.ProdutoServico;
+
+@RestController
+@RequestMapping("/admin")
+public class AdminController {
+	@Autowired
+	private ProdutoServico produtoServico;
+
+	@PostMapping("/inserir")
+	public ResponseEntity<ProdutoDTO> inserirProduto (@RequestBody ProdutoDTO produtoDTO) {
+		produtoServico.inserirProduto(produtoDTO);
+		return ResponseEntity.status(HttpStatus.OK).body(produtoDTO);
+	}
+	
+	@GetMapping("/estoque")
+	public ResponseEntity<List<Produto>> estoque(){
+		List<Produto> estoque = produtoServico.estoque();
+		return ResponseEntity.status(200).body(estoque);
+	}
+	
+	@PutMapping("/atualizar")
+	public ResponseEntity<ProdutoDTO> atualizar(@RequestBody ProdutoDTO produtoDTO){
+		produtoServico.inserirProduto(produtoDTO);
+		return ResponseEntity.status(200).build();
+	}
+}
