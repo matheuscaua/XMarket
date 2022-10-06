@@ -12,10 +12,22 @@ import lombok.Setter;
 @NoArgsConstructor
 public class ProdutoDTO {
 
+    private Long id;
     private String nome;
     private Double preco;
     private String marca;
+    private Integer quantidade;
     private String imagemUrl;
 
+
+
+    public ProdutoDTO(Produto produto){
+        this.setNome(produto.getNome());
+        this.setPreco(produto.getPreco());
+        this.setMarca(produto.getMarca());
+        this.setQuantidade(produto.getQuantidade());
+        this.setId(produto.getId());
+
+    }
 
 }

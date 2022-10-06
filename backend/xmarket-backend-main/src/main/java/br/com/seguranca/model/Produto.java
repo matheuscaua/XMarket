@@ -27,17 +27,24 @@ public class Produto {
 	private Double preco;
 	private String marca;
 	private String imagemUrl;
+	private Integer quantidade;
 
-
+	public Produto(Long id) {
+		this.id = id;
+	}
 
 	public ProdutoDTO toProdutoDTO (){
 
 		return new ProdutoDTO(
-
+				this.id,
 				this.nome,
 				this.preco,
 				this.marca,
+				this.quantidade,
 				this.imagemUrl
+
+
+
 		);
 
 	}
