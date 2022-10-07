@@ -1,15 +1,17 @@
 package br.com.seguranca.model;
 
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import javax.persistence.*;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
 
 @Getter
 @Setter
@@ -23,34 +25,23 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @NotBlank(message = "O campo nome é obrigatório!")
-    @Column(name = "usuario", length = 100)
-    private String usuario;
     
-    @Email(message = "Insira um email válido!")
-    @NotBlank(message = "O campo email é obrigatório!")
-    @Column(name = "email",unique = true, nullable = false)
+    private String usuario;
+    @Column(name = "email", unique = true) 
     private String email;
     
-    @NotBlank(message = "O campo senha é obrigatório!")
-    @Size(min = 6, message = "A senha deve ter no mínimo 6 caracteres!")
-    @Column(name = "senha")
+    @Column(name = "senha", unique = true)
     private String senha;
     
-    @Column(name = "role")
     private String role;
  
-    @NotBlank(message = "O campo cpf é obrigatório!")
-    @Column(name = "cpf" , length = 11)
+    @Column(name = "cpf", length = 14)
     private String cpf;
 
-    @Column(name = "telefone",length = 11)
     private String telefone;
 
-    @Column(name = "endereco")
     private String endereco;
-
-    @Column(name = "rg", length = 7)
+    
     private String rg;
 
 
