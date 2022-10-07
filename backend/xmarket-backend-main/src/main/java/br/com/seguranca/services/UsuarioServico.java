@@ -19,15 +19,33 @@ public class UsuarioServico {
 
 	private PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
-	public Usuario salvarUsuario(UsuarioDTO usuarioDTO) {
-		String encoder = this.passwordEncoder.encode(usuarioDTO.getSenha()); /* Criptografa a senha */
-		usuarioDTO.setSenha(encoder);/* Seta a senha criptografada */
-		Usuario usuario = new Usuario();/* Instancia um objeto usuario */
-		BeanUtils.copyProperties(usuarioDTO, usuario); /*Passa as propriedades de DTO para o objeto*/
-		return usuarioRepository.save(usuario); /*Salva o objeto com a senha criptograda*/
+	
+	//Método para verificar se exitem email,cpf e rg já cadastrados no banco de dados
+	public boolean validarCadastro(UsuarioDTO usuarioDTO) {
+		String email = usuarioRepository.findByEmail(usuarioDTO.getEmail());
+		BeanUtils.copyProperties(usuarioDTO.getEmail(), email);
+		if(email == null) {
+			return true;
+		}
+		return false;
+				
+	}
+	
+	public boolean cadastrarUsuario(UsuarioDTO usuarioDTO) {
+		if(validarCadastro(usuarioDTO)) {
+			String encoder = this.passwordEncoder.encode(usuarioDTO.getSenha()); /* Criptografa a senha */
+			usuarioDTO.setSenha(encoder);/* Seta a senha criptografada */
+			Usuario usuario = new Usuario();/* Instancia um objeto usuario */
+			BeanUtils.copyProperties(usuarioDTO, usuario); /*Passa as propriedades de DTO para o objeto*/
+			usuarioRepository.save(usuario);
+			return true;//Salva o objeto com a senha criptograda
+		}else {
+			return false;//Caso tenha atributos ja existentes, retorna false e nao cadastra usuário
+		}
+	
 	}
 
-	public boolean validar(Login login) {
+	public boolean validarLogin(Login login) {
 		Usuario usuario = usuarioRepository.getByEmail(login.getEmail());//Verifica se o existe usuario com o email digitado, caso nao exista ele retorna false
 		if (usuario == null) { /*Caso o objeto seja nulo ou vazio retorna um false*/
 			return false;
