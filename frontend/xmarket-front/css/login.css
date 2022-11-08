@@ -1,0 +1,68 @@
+@import url(./shared/mensagemValidacao.css);
+
+.main-image{
+  background-image: url(../assets/images/new-back.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+}
+.main-form{
+  display: flex;
+}
+.form-signin{
+  margin: auto;
+  width: 80%;
+  height: 90%;
+  background: white;
+}
+.form-signin input{
+  height: 7vh;
+}
+.logo{
+  width: 100%;
+  height: 15vh;
+
+}
+
+@media (max-width: 991px) {
+  .main-image{
+    display: none;
+    /* position: absolute;
+    flex: 0 0 100%;
+    background-color: red; */
+  }
+}
+
+#login, #cadastrar{
+  width: 100%;
+  border-radius: 5px;
+  height: 7vh;
+  background-color: rgb(25,68,131);
+  border: none;
+
+  color: white;
+  font-size: 20px;
+
+  cursor: pointer;
+}
+#cadastrar{
+  color: rgb(25,68,131);
+  background-color: white;
+  border: 1px solid rgb(25,68,131);
+}
+
+#cadastrar:focus{
+  background-color: rgb(25,68,131);
+  outline-style: none;
+  color: white;
+
+  transition: 0.4s;
+  
+  color: white;
+}

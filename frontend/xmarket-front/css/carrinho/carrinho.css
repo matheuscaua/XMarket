@@ -1,0 +1,264 @@
+@import "./metodos-de-pagamento.css";
+@import url(../shared/mensagemValidacao.css);
+
+.button-return{
+    background-color: white; 
+    width: 48%; 
+    height:10vh; 
+    margin: auto; 
+    margin-top: 1.5vh;
+    border-radius: 4px;
+    border: 1px solid #194283;
+
+    cursor: pointer;
+}
+
+.button-clean-cart{
+    background-color: white; 
+    width: 48%; 
+    height:10vh; 
+    margin: auto; 
+    margin-top: 1.5vh;
+    border-radius: 4px;
+    border: 1px solid #194283;
+
+    cursor: pointer;
+}
+
+
+.button-finalize{
+    background-color: #194283; 
+    width: 98%;
+    height:10vh; 
+    margin: auto; 
+    margin-top: 1.5vh;
+    border-radius: 4px;
+
+    cursor: pointer;
+}
+
+.payment-area{
+    width: 98%; 
+    height:75vh; 
+    margin: auto; 
+    margin-top: 1vh;
+
+    box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 4px;
+}
+
+.products-area{
+    width: 98%;
+    height: 98vh;
+    margin: auto;
+    margin-top: 1vh;
+
+    background-color: white;
+    box-shadow: 1px 4px 4px 2px rgba(0, 0, 0, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 4px;
+
+    padding: 0.1% 1%;
+
+    Overflow-y:scroll;
+}
+
+.products-item{
+    position: relative;
+    width: 100%;
+    min-height: 80px;
+    margin: 1vh auto;
+
+
+    border-radius: 1px;
+
+    display: flex;
+    justify-content: start;
+    padding: 0.8%;
+
+    box-shadow: 0.5px 2px 0.5px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.first-infos{
+    width: 80%;
+    height: 150px;
+
+    display: flex;
+}
+
+.image-item{
+    width: 150px;
+    height: 100%;
+}
+.image-item img {
+    width: 150px;
+    height: 150px;
+}
+.description-item{
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding-left: 10px;
+}
+.description-item h4 {
+    display: block;
+    margin: auto 0;
+    width: 60%;
+    font-size: 1.3rem;
+    color: #194283;
+
+    overflow-x: clip;
+}
+
+.description-item h3 {
+    display: block;
+    margin: auto 0;
+    width: 60%;
+    font-size: 1.3rem;
+    color: #194283;
+
+    overflow-x: clip;
+}
+
+.description-item h6 {
+    text-align: start;
+}
+
+.second-infos{
+    min-width: 20%;
+    height: 150px;
+    display: inline-grid;
+    position: absolute;
+    right: 0.8%;
+
+    justify-content: end;
+}
+.form-outline .control-count{
+    cursor: default;
+}
+.control-count{
+    width: 40px;
+    height: 30px;
+    border-radius: 2px;
+    background-color: white;
+
+    border: 1px solid #194283;
+
+    text-align: center;
+
+    cursor: pointer ;
+}
+
+.container-description{
+    display: inline-grid;
+}
+
+.area-control{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: end;
+}
+
+.delete-button{
+    width: 100%;
+    height: 30px;
+
+
+    /* background-color: red; */
+    /* border: 1px solid rgb(184, 1, 1); */
+    border-radius: 2px;
+
+    display: flex;
+    justify-content: center;
+}
+.quantidade-estoque{
+    width: 120px;
+    height: 24px;
+    color: #ff1717;
+    display: flex;
+    font-weight: bold;
+    font-size: 0.875rem;
+    justify-content: space-evenly;
+
+    align-items: center;
+}
+.quantidade-estoque h6{
+    margin: auto 0;
+}
+
+.delete-button p {
+    margin: auto 0;
+    color: rgb(112, 112, 112);
+    font-weight: 400;
+
+    cursor: pointer;
+}
+
+.delete-button i {
+    cursor: pointer;
+}
+
+.fa-regular{
+    color: rgb(112, 112, 112);
+    margin: auto 5px;
+}
+
+.second-description{
+    display: flex;
+    justify-content: space-between;
+}
+.second-description h4 {
+    margin-right: 50px;
+
+}
+
+.second-description h6 {
+   margin: auto 0;
+
+}
+.container-description{
+    width: 100%;
+}
+
+@media (max-width: 730px) {
+    .image-item {
+        width: 100%;
+        height: 100%;
+    }
+    .first-infos {
+        width: 100%;
+        height: 150px;
+        display: inline-grid;
+    }
+
+    .products-item {
+        position: relative;
+        width: 100%;
+        min-height: 80px;
+        height: 35%;
+        margin: 1vh auto;
+        border-radius: 1px;
+        display: flex;
+        justify-content: start;
+        padding: 1%;
+        box-shadow: 0.5px 2px 0.5px 0 rgb(0 0 0 / 10%), 0 6px 20px 0 rgb(0 0 0 / 10%);
+    }
+    .container-description{
+        margin-top: 10px;
+        display: flex;
+    }
+
+    .description-item h3 {
+        display: block;
+        margin: auto 0;
+        width: 60%;
+        font-size: 1.3rem;
+        color: #194283;
+    
+        overflow-x: clip;
+        text-align: end;
+    }
+}

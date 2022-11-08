@@ -1,0 +1,43 @@
+#confirmar-operacao {
+    width: 50%;
+    margin-left: 70%;
+    background-color: #194283;
+    border: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 1% 10%;
+    max-width: 200px;
+  }
+  
+.canva-mensagem {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  .mensagem {
+    position: fixed;
+    padding: 2%;
+    top: 5%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 70%;
+    height: 200px;
+    background: white;
+    border: 1px solid rgb(25 38 131);
+    border-radius: 3px;
+    display: inline-grid;
+    color: #272525;
+    justify-content: center;
+  }
+  .mensagem-erro{
+    color: red;
+  }
+  .mensagem-sucesso{
+    color: green;
+  }

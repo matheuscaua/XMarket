@@ -1,0 +1,67 @@
+.accordion-body {
+    position: relative;
+    background-color: white;
+}
+
+.payment-method {
+    width: 100%;
+    height: 40%;
+    display: inline-grid;
+}
+
+.valor-produto{
+    display: flex;
+    justify-content: space-between;
+    min-height: 20px;
+    max-height: 40px;
+
+}
+.preview-produto{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+.soma-produto{
+    display: flex;
+}
+.payment-value{
+    width: 100%;
+    height: 100%;
+
+    padding-top: 3%;
+}
+.payment-itens{
+    width: 90%;
+    height: 100%;
+
+    display: block;
+    margin: 0 auto;
+}
+.payment-products{
+    width: 100%;
+    height: 90%;
+
+    border-bottom: 1px solid rgb(43, 43, 43);
+    
+    Overflow-y:scroll;
+}
+.payment-total{
+    width: 100%;
+    height: 10%;
+    padding: 0 4%;
+}
+.payment-sale{
+    width: 100%;
+    height: 33%;
+    display: flex;
+
+    justify-content: space-between;
+}
+
+/* 
+.payment-frete, .payment-total-products, .payment-sale{
+    width: 100%;
+    height: 33%;
+    display: flex;
+    justify-content: space-between;
+} */

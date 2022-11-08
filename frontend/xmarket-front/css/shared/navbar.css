@@ -1,0 +1,333 @@
+.img-logo {
+    margin: auto;
+    height: 45px;
+    width: 200px;
+    padding: 0;
+
+}
+
+.navbar-toggler {
+    position: absolute;
+}
+
+nav {
+    border-bottom: 0px solid #194283;
+    box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.2)
+}
+
+.nav-item {
+    display: flex;
+}
+
+.nav-link {
+    margin: auto;
+}
+
+.secondary-navigator {
+    display: flex;
+    justify-content: space-around;
+    width: 100px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.primary-color {
+    fill: #194283;
+    color: #194283;
+}
+
+#cart-button,
+#setting-button {
+    cursor: pointer;
+}
+
+#area-configuracoes {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    margin-right: 2%;
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border: 1px solid #194283;
+    border-radius: 5px;
+
+
+    box-shadow: rgb(0 0 0 / 20%) 0px 4px 8px 0px, rgb(0 0 0 / 19%) 0px 6px 20px 0px;
+    z-index: 11;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #194283;
+}
+
+#area-configuracoes ul {
+    margin: auto;
+    background-color: white;
+    height: 80%;
+    width: 80%;
+}
+
+#deslogar {
+    cursor: pointer;
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    justify-content: start;
+    bottom: 0;
+    width: 77%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cart-logo {
+    display: flex;
+}
+
+.cart-logo svg {
+    margin: auto;
+}
+
+#canva-quantidade-carrinho {
+    width: 20px;
+    height: 20px;
+    background: #cd0f0f;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 12.5px;
+    margin-left: -10px;
+    display: none;
+}
+
+#quantidade-carrinho {
+    display: flex;
+    margin: auto;
+    color: white;
+    font-size: 10px;
+}
+
+.no-selectable {
+    user-select: none;
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+/Edge */
+}
+
+
+#pedidos,
+#perfil {
+    display: flex;
+    justify-content: start;
+
+    cursor: pointer;
+    align-content: center;
+}
+
+#pedidos p,
+#perfil p,
+#deslogar p {
+    margin-left: 20px;
+}
+
+#area-pedidos {
+    position: absolute;
+    height: calc(100vh - 61px);
+    width: 100%;
+
+    background-color: rgb(221, 217, 217);
+
+    z-index: 10;
+
+    padding: 0 20%;
+
+    display: none;
+
+    overflow-y: scroll;
+}
+
+#conteudo-da-pagina {
+    display: block;
+}
+
+.card-historico {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    margin: 10px 0;
+    padding: 1%;
+
+    display: flex;
+
+    cursor: pointer;
+}
+
+.card-historico h4 {
+    font-size: 1.3rem;
+    ;
+    color: #666;
+}
+
+.imagem-historico {
+    height: calc(150px - 6%);
+}
+
+.data-pedido-dinamico {
+    position: absolute;
+    top: 3%;
+    right: 1%;
+    color: #666;
+}
+
+.metodo-pagemento {
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.metodo-pagemento p {
+    margin: auto 20px;
+}
+
+.endereco-pedido {
+    position: absolute;
+    width: 80%;
+    bottom: 0;
+    right: 1%;
+    display: flex;
+    height: 30px;
+
+    left: 147px;
+}
+
+.informacao-historico {
+    margin-left: 10px;
+}
+
+.valor-pedido {
+    position: absolute;
+
+    bottom: 0;
+    right: 1%;
+    display: flex;
+}
+
+.valor-pedido h6 {
+    font-size: 1.2rem;
+
+    color: rgb(25, 68, 131);
+}
+
+#pedido-historico {
+    position: fixed;
+    height: 90vh;
+    width: 100%;
+    padding: 0 20%;
+
+    z-index: 10;
+
+    background-color: rgb(246, 245, 245);
+
+    display: none;
+    overflow-y: scroll;
+}
+
+#descricao-pedido {
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    display: block;
+    color: rgb(78, 75, 75);
+
+
+}
+
+#descricao-pedido h5 {
+    font-weight: 350;
+    font-size: 1rem;
+}
+
+#descricao-pedido h6 {
+    color: rgb(78, 75, 75);
+}
+
+#descricao-pedido .data-pedido-dinamico {
+    color: rgb(78, 75, 75);
+    top: 1%;
+
+}
+
+#descricao-pedido .card-historico {
+    border-bottom: 1px solid #666;
+    border-radius: 0;
+    height: 120px;
+}
+.card-historico p {
+    font-size: 0.875rem;
+}
+#descricao-pedido .card-historico .imagem-historico {
+    height: calc(120px - 10%);
+}
+
+#total-pedido {
+    display: flex;
+
+    justify-content: space-between;
+
+}
+
+.area-quantidade-historico {
+    display: flex;
+}
+
+.area-quantidade-historico h6 {
+    line-height: unset !important;
+    font-size: 1rem;
+   
+}
+
+#area-total-historico h5 {
+    color: rgb(25, 68, 131);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+#fechar-venda-especifica, #fechar-venda-geral{
+    position: absolute;
+    right: 1%;
+    cursor: pointer;
+
+    color: #666;
+}
+
+
+.forma-pagamento{
+    display: inline-grid;
+    margin: 0 15px;
+    text-align: center;
+}
+.forma-pagamento p {
+    margin-top: 10px
+}
+
+.area-numero-pedido{
+    display: flex;
+}
+#endereco-pedido-dinamico{
+    margin-left: 10px;
+}
